@@ -1,8 +1,68 @@
+
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Register = () => {
+
+    const navigate = useNavigate()
+
+    const {user, createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+
+    const handleRegister = (e)=>{
+        e.preventDefault()   
+        const name = e.target.name.value
+        const email = e.target.email.value
+        const photoUrl = e.target.photo.value
+        const password = e.target.password.value
+
+        console.log(name, email, photoUrl, password);
+        if(password.length<6){
+            toast.error('Password must be atleast 6 characters', {
+                position: "bottom-right",
+                autoClose: 2000,
+                });
+        }
+        else if(!/[A-Z]/.test(password)){
+            toast.error('Password should have atleast one upper case letter', {
+                position: "bottom-right",
+                autoClose: 2000,
+                });
+        }
+        else if(!/[!@#$%^&*()_+{}[\]:;<>,.?~\\]/.test(password)){
+            toast.error('Password should have atleast one special character', {
+                position: "bottom-right",
+                autoClose: 2000,
+                });
+        }
+        else{
+            createUser(email, password)
+            .then(result=>{
+                updateUser(name, photoUrl)
+                .then(CurrentResult=>{
+                    navigate('/')
+                    console.log(CurrentResult.user);
+                })
+                .then(error=>{console.log(error.message);})
+                toast.success('Account created', {
+                    position: "bottom-right",
+                    autoClose: 2000,
+                    });
+                console.log(result.user);
+            })
+            .then(error=>{console.log(error.message);})
+        }
+    }
+
+    const handleGoogleSignIn = ()=>{
+        signInWithGoogle()
+    }
+    const handleGithubSignIn = ()=>{
+        signInWithGitHub()
+    }
 
 
     return (
@@ -11,28 +71,28 @@ const Register = () => {
 
                 <div className="w-full max-w-lg -mt-28">
                     <div className="leading-loose">
-                        <form className=" p-10 m-auto rounded shadow-2xl bg-white/20">
+                        <form onSubmit={handleRegister} className=" p-10 m-auto rounded shadow-2xl bg-white/20">
                             <p className="mb-8 text-3xl font-semibold  text-center ">
                                 Register
                             </p>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="text" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="name" name="name" />
+                                    <input type="text" id="login-with-bg-name" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="name" name="name" />
                                 </div>
                             </div>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="email" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="email" name="email" />
+                                    <input type="email" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="email" name="email" required />
                                 </div>
                             </div>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="text" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="photo url" name="photo" />
+                                    <input type="text" id="login-with-bg-photo" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="photo url" name="photo" />
                                 </div>
                             </div>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="password" id="login-with-bg-password" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="password" name="password" />
+                                    <input type="password" id="login-with-bg-password" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="password" name="password" required/>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between mt-6">
@@ -42,23 +102,22 @@ const Register = () => {
                             </div>
                             <div className="text-center text-white">
                                 <div className="mt-5">
-                                    <p className="flex justify-center items-center"><span className="border-1 border-black w-[100px] mr-3"><hr /></span>Register with social accounts <span className="border-1 w-[100px] ml-3"><hr /></span></p>
+                                    <div className="flex justify-center items-center"><span className="border-1 border-black w-[100px] mr-3"><hr /></span>Register with social accounts <span className="border-1 w-[100px] ml-3"><hr /></span></div>
                                 </div>
 
                                 <div className="mt-4 ">  
                                     <div className="mb-4 px-10 flex justify-center items-center w-full ">
-                                        <button className="btn btn-outline rounded-3xl flex normal-case w-[300px] ">
+                                        <button onClick={handleGoogleSignIn} className="btn btn-outline rounded-3xl flex normal-case w-[300px] ">
                                             <FcGoogle className="text-2xl"></FcGoogle>
                                             Continue with Google    
                                         </button>
                                     </div>  
                                     <div className="mb-4 px-10 flex justify-center items-center w-full">
-                                        <button className="btn btn-outline rounded-3xl flex normal-case w-[300px]">
+                                        <button onClick={handleGithubSignIn} className="btn btn-outline rounded-3xl flex normal-case w-[300px]">
                                             <BsGithub className="text-2xl"></BsGithub>
                                             Continue with GitHub
                                         </button>
                                     </div>
-                                    
                                 </div>  
                             </div>
 

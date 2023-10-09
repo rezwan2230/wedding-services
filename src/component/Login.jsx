@@ -1,8 +1,44 @@
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const Login = () => {
+
+    const navigate = useNavigate()
+    const {user, signIn, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+
+
+    const handleLogin = (e)=>{
+        e.preventDefault()   
+        const email = e.target.email.value
+        const password = e.target.password.value
+
+        console.log(email, password);
+
+        signIn(email, password)
+        .then(result=>{
+            navigate('/')
+            console.log(result.user);
+        })
+        .catch(error=>{
+            toast.error('Not Match', {
+                position: "bottom-right",
+                autoClose: 2000,
+                });
+            console.log(error.message);
+        })
+
+    }
+
+    const handleGoogleSignIn = ()=>{
+        signInWithGoogle()
+    }
+    const handleGithubSignIn = ()=>{
+        signInWithGitHub()
+    }
 
     return (
         <div className="w-full h-screen font-sans bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/d65tcPb/update.jpg)', backgroundSize:'cover',  backgroundPosition: 'center', objectFit:"top left" }}>
@@ -10,18 +46,18 @@ const Login = () => {
 
                 <div className="w-full max-w-lg lg:ml-[600px] -mt-44">
                     <div className="leading-loose">
-                        <form className="max-w-sm p-10 m-auto rounded shadow-2xl bg-white/20">
+                        <form onSubmit={handleLogin} className="max-w-sm p-10 m-auto rounded shadow-2xl bg-white/20">
                             <p className="mb-8 text-3xl font-semibold  text-center ">
                                 Login
                             </p>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="text" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="email" name="email" />
+                                    <input type="text" id="login-with-bg-email" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="email" name="email" required />
                                 </div>
                             </div>
                             <div className="mb-2">
                                 <div className=" relative ">
-                                    <input type="password" id="login-with-bg-password" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="password" name="password"/>
+                                    <input type="password" id="login-with-bg-password" className=" rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="password" name="password" required/>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between mt-6">
@@ -35,8 +71,8 @@ const Login = () => {
                                 </div>
 
                                 <div className="flex justify-center items-center gap-6 mt-2">
-                                    <FcGoogle className="text-3xl"></FcGoogle>
-                                    <BsGithub className="text-[26px]"></BsGithub>
+                                    <FcGoogle onClick={handleGoogleSignIn} className="text-3xl"></FcGoogle>
+                                    <BsGithub onClick={handleGithubSignIn} className="text-[26px]"></BsGithub>
                                 </div>
                             </div>
 
@@ -47,7 +83,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     );
 };
 

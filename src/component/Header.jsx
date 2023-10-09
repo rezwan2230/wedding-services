@@ -1,6 +1,11 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import userPic from '../assets/user.png'
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext)
 
     const navLink = <>
         <div className="flex gap-10 font-semibold text-lg">
@@ -11,6 +16,10 @@ const Header = () => {
             <NavLink to='/register'><li><a>Register</a></li></NavLink>
         </div>
     </>
+
+    const handleSignOut = ()=>{
+        logOut()
+    }
     return (
         <div className="navbar bg-base-100 container mx-auto">
             <div className="navbar-start">
@@ -31,16 +40,27 @@ const Header = () => {
             </div>
 
             <div className="navbar-end">
+                {
+                    user && <div className="text-lg font-semibold mr-2">{user?.displayName}</div>
+                }
                 <div className="flex-none">
                     <div className="dropdown dropdown-end">
                         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="w-10 rounded-full">
-                                <img src="https://i.ibb.co/n8Tj3gM/cute-girl-works-laptop-hipster-cafe.jpg" />
-                            </div>
+
+                            {
+                                user ? <>
+                                    <img className="rounded-3xl" src={user?.photoURL} alt="" />
+                                </> :
+                                    <div className="w-10 rounded-full">
+                                        <img src={userPic} />
+                                    </div>
+                            }
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Settings</a></li>
-                            <li><a>Logout</a></li>
+                            {
+                               user? <li className="font-semibold"><a onClick={handleSignOut}>Logout</a></li> : 
+                               <NavLink to="/login"><li className="font-semibold"><a>Login</a></li></NavLink>
+                            }
                         </ul>
                     </div>
                 </div>
