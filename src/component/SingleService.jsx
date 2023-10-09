@@ -1,7 +1,8 @@
 import { BsArrowRightShort } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 const SingleService = ({ service }) => {
-    const {title, big_title, img, short_description} = service
+    const {id, title, big_title, img, short_description } = service
     return (
         <div>
             <div className="relative flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -17,16 +18,18 @@ const SingleService = ({ service }) => {
                         {big_title}
                     </h4>
                     <p className="mb-8 mt-5 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                       {short_description}
+                        {short_description}
                     </p>
                     <a className="inline-block" href="#">
-                        <button
-                            className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                            type="button"
-                        >
-                            Learn More
-                            <BsArrowRightShort className="text-[22px] -ml-1"></BsArrowRightShort>
-                        </button>
+                        <NavLink to={`service/${id}`}>
+                            <button
+                                className="flex select-none items-center gap-2 rounded-lg py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                                type="button"
+                            >
+                                Learn More
+                                <BsArrowRightShort className="text-[22px] -ml-1"></BsArrowRightShort>
+                            </button>
+                        </NavLink>
                     </a>
                 </div>
             </div>

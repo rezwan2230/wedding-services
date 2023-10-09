@@ -3,9 +3,9 @@
         "id": 1,
         "title": "The Ceremony",
         "big_title": "Your Dream Wedding, Our Expertise",
-        "img" : "https://i.ibb.co/KX8LwjC/pexels-studio-negarin-2613446.jpghttps://i.ibb.co/L6dmgbp/pexels-asad-photo-maldives-169198.jpg",
+        "img" : "https://i.ibb.co/gVC51hT/pexels-dimitri-kuliuk-1488324.jpg",
         "short_description": "A marriage ceremony, a celebration of love and commitment, where two souls become one, surrounded by family and friends in joyous union.",
-        "long_description": "Long description for Product A. This is a more detailed description of Product A."
+        "long_description": "The Marriage Ceremony is a deeply meaningful and joyous occasion, where two individuals embark on a lifelong journey of love and partnership. It is a celebration of commitment, unity, and the promise to stand by each other through all of life's adventures. Surrounded by the warmth of family and friends, the couple exchange heartfelt vows, sealing their love with promises of support and devotion. This sacred event is marked by time-honored traditions and rituals that symbolize the merging of two lives into one. With every detail meticulously planned, The Marriage Ceremony is a momentous and unforgettable celebration of love, unity, and the beginning of a beautiful shared future."
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "big_title": "Marriage Welcome Parties",
         "img" : "https://i.ibb.co/ZxsFFQw/pexels-5005252.jpg",
         "short_description": "Start the celebration with a Welcome Party! Join us for a night of joy, laughter, and excitement as we begin our wedding festivities together.",
-        "long_description": "Long description for Product B. This is a more detailed description of Product B."
+        "long_description": "The Welcome Party is a vibrant and joyful prelude to the main wedding celebration. It offers a warm embrace to guests who have traveled from near and far to share in the couple's happiness. This lively event is filled with music, laughter, and delectable cuisine, setting the stage for days of festivities ahead. It's a time for guests to mingle, bond, and build connections while getting a taste of the couple's unique style and hospitality. The Welcome Party creates an atmosphere of camaraderie and excitement, infusing the wedding journey with a sense of togetherness that will be cherished throughout the entire celebration."
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "big_title": "Marriage Engagement Parties",
         "img" : "https://i.ibb.co/bRbZDL8/pexels-trung-nguyen-5096307.jpg",
         "short_description": "An Engagement Party: Celebrate the journey of love and commitment. Join us for a joyful gathering as we mark the beginning of our forever together.",
-        "long_description": "Long description for Product C. This is a more detailed description of Product C."
+        "long_description": "The Engagement Party is a joyful prelude to a couple's journey towards marriage. It's a celebration of love and commitment, where friends and family come together to share in the couple's happiness. This intimate gathering sets the stage for the forthcoming wedding festivities. The event is marked by heartfelt toasts, warm wishes, and the exchange of rings, symbolizing the couple's promise to spend their lives together. With a blend of excitement and anticipation, the Engagement Party captures the essence of love's beginning, surrounded by the love and support of loved ones. It's a memorable occasion that marks the start of a beautiful new chapter in the couple's life."
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "big_title": "Traditional Haldi Night Celebrations",
         "img" : "https://i.ibb.co/rMc13nx/Haldi-Blog-Banner-1400x788.jpg",
         "short_description": "A vibrant pre-wedding celebration filled with tradition and color. Join us for an evening of blessings and joyful rituals, honoring the bride and groom.",
-        "long_description": "Long description for Product D. This is a more detailed description of Product D."
+        "long_description": "Haldi Nights are a vibrant and cherished pre-wedding tradition in many cultures. This spirited celebration involves applying a mixture of turmeric and other auspicious ingredients on the bride and groom's skin, symbolizing purity and good luck. The night is filled with laughter, music, and dancing as friends and family come together to bless the couple. It's a colorful and joyous occasion where guests often wear yellow attire, reflecting the significance of the haldi paste. Haldi Nights create a sense of unity, love, and anticipation for the upcoming wedding, making it a memorable and cherished part of the wedding festivities."
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "big_title": " Celebrate Love, Share Laughter",
         "img" : "https://i.ibb.co/999zrgp/pexels-fu-zhichao-587741.jpg",
         "short_description": "An elegant affair in honor of the bride. A day of joy, laughter, and cherished moments with friends and family.",
-        "long_description": "Long description for Product E. This is a more detailed description of Product E."
+        "long_description": "Haldi Nights, a cherished pre-wedding tradition, bring a burst of color and joy to the wedding festivities. This lively celebration involves applying a paste of turmeric and other auspicious ingredients to the bride and groom's skin, signifying purity and good fortune. Vibrant yellow and festive decor create a warm and spirited atmosphere. Family and friends gather to partake in this age-old ritual, showering the couple with blessings and well-wishes. Traditional music, dancing, and laughter fill the air, making Haldi Nights a vibrant and unforgettable occasion that symbolizes love, unity, and the anticipation of a beautiful journey ahead as the couple prepares to embark on their marital adventure."
     },
     {
         "id": 6,
@@ -45,6 +45,6 @@
         "big_title": "Party Favors to Delight Your Guests",
         "img" : "https://i.ibb.co/d59btwG/pexels-pavel-danilyuk-6405771.jpg",
         "short_description": "Tokens of gratitude and delight for your guests. Small gestures that leave lasting memories from your special celebration.",
-        "long_description": "Long description for Product F. This is a more detailed description of Product F."
+        "long_description": "Party Favors are delightful tokens of appreciation, adding a touch of gratitude to any celebration. These small, thoughtfully chosen gifts are a way to express thanks to guests for sharing in special moments. Whether it's a wedding, birthday, or any festivity, party favors are a charming tradition that leaves a lasting impression. They come in various forms, from personalized trinkets to sweet treats, and are often adorned with the event's theme or date. Party favors bring smiles and fond memories, serving as keepsakes that remind guests of the joyous occasion long after the party has ended. Their simplicity holds the power to convey heartfelt thanks."
     }
 ]

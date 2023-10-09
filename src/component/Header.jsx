@@ -10,7 +10,6 @@ const Header = () => {
     const navLink = <>
         <div className="flex gap-10 font-semibold text-lg">
             <NavLink><li><a>Home</a></li></NavLink>
-            <NavLink><li><a>About Us</a></li></NavLink>
             <NavLink to='/contact'><li><a>Contact</a></li></NavLink>
             <NavLink to='/teammate'><li><a>TeamMate</a></li></NavLink>
             <NavLink to='/register'><li><a>Register</a></li></NavLink>

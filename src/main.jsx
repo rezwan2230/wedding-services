@@ -13,8 +13,9 @@ import Register from './component/Register';
 import { ToastContainer } from 'react-toastify';
 import TeamMate from './component/TeamMate';
 import ErrorPage from './component/ErrorPage/ErrorPage';
-import Service from './component/Service';
 import Contact from './component/Contact';
+import ServiceDetails from './component/ServiceDetails';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader : ()=> fetch('service.json')
+        loader : ()=> fetch('/service.json')
       },
       {
         path: "/login",
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/service/:id",
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute> ,
+        loader : ()=> fetch('/service.json')
       },
       {
         path: "/teammate",
