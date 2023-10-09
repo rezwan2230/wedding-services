@@ -10,10 +10,12 @@ const Header = () => {
     const navLink = <>
         <div className="flex gap-10 font-semibold text-lg">
             <NavLink><li><a>Home</a></li></NavLink>
-            <NavLink><li><a>About</a></li></NavLink>
+            <NavLink><li><a>About Us</a></li></NavLink>
             <NavLink><li><a>Contact</a></li></NavLink>
+            {/* <NavLink to='/register'><li><a>Register</a></li></NavLink> */}
+            <NavLink to='/teammate'><li><a>TeamMate</a></li></NavLink>
             <NavLink to='/login'><li><a>Login</a></li></NavLink>
-            <NavLink to='/register'><li><a>Register</a></li></NavLink>
+            {/* <NavLink to='/task'><li><a>Task</a></li></NavLink> */}
         </div>
     </>
 
@@ -31,7 +33,7 @@ const Header = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">MediCare</a>
+                <a className="btn btn-ghost normal-case text-xl">Habibi</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">

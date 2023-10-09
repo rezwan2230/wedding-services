@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "The Ceremony",
+        "big_title": "Your Dream Wedding, Our Expertise",
+        "img" : "https://i.ibb.co/KX8LwjC/pexels-studio-negarin-2613446.jpghttps://i.ibb.co/L6dmgbp/pexels-asad-photo-maldives-169198.jpg",
+        "short_description": "A marriage ceremony, a celebration of love and commitment, where two souls become one, surrounded by family and friends in joyous union.",
+        "long_description": "Long description for Product A. This is a more detailed description of Product A."
+    },
+    {
+        "id": 2,
+        "title": "Welcome Party",
+        "big_title": "Marriage Welcome Parties",
+        "img" : "https://i.ibb.co/ZxsFFQw/pexels-5005252.jpg",
+        "short_description": "Start the celebration with a Welcome Party! Join us for a night of joy, laughter, and excitement as we begin our wedding festivities together.",
+        "long_description": "Long description for Product B. This is a more detailed description of Product B."
+    },
+    {
+        "id": 3,
+        "title": "Engagement Party",
+        "big_title": "Marriage Engagement Parties",
+        "img" : "https://i.ibb.co/bRbZDL8/pexels-trung-nguyen-5096307.jpg",
+        "short_description": "An Engagement Party: Celebrate the journey of love and commitment. Join us for a joyful gathering as we mark the beginning of our forever together.",
+        "long_description": "Long description for Product C. This is a more detailed description of Product C."
+    },
+    {
+        "id": 4,
+        "title": "Haldi Nights",
+        "big_title": "Traditional Haldi Night Celebrations",
+        "img" : "https://i.ibb.co/rMc13nx/Haldi-Blog-Banner-1400x788.jpg",
+        "short_description": "A vibrant pre-wedding celebration filled with tradition and color. Join us for an evening of blessings and joyful rituals, honoring the bride and groom.",
+        "long_description": "Long description for Product D. This is a more detailed description of Product D."
+    },
+    {
+        "id": 5,
+        "title": "Bridal Luncheon",
+        "big_title": " Celebrate Love, Share Laughter",
+        "img" : "https://i.ibb.co/999zrgp/pexels-fu-zhichao-587741.jpg",
+        "short_description": "An elegant affair in honor of the bride. A day of joy, laughter, and cherished moments with friends and family.",
+        "long_description": "Long description for Product E. This is a more detailed description of Product E."
+    },
+    {
+        "id": 6,
+        "title": "Party Favors",
+        "big_title": "Party Favors to Delight Your Guests",
+        "img" : "https://i.ibb.co/d59btwG/pexels-pavel-danilyuk-6405771.jpg",
+        "short_description": "Tokens of gratitude and delight for your guests. Small gestures that leave lasting memories from your special celebration.",
+        "long_description": "Long description for Product F. This is a more detailed description of Product F."
+    }
+]

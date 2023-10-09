@@ -10,7 +10,7 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const {user, createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+    const {createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
 
     const handleRegister = (e)=>{
         e.preventDefault()   
