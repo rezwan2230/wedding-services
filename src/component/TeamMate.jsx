@@ -2,11 +2,10 @@
 const TeamMate = () => {
     return (
         <div>
-            <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+            <div className="px-4 -mt-12 first-letter:py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
                 <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                     <div>
                         <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-                            Core Team
                         </p>
                     </div>
                     <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
@@ -27,11 +26,6 @@ const TeamMate = () => {
                                         <circle cx="1" cy="1" r=".7" />
                                     </pattern>
                                 </defs>
-                                <rect
-                                    fill="url(#1d4040f3-9f3e-4ac7-b117-7d4009658ced)"
-                                    width="52"
-                                    height="24"
-                                />
                             </svg>
                             <span className="relative">Welcome</span>
                         </span>{' '}
@@ -54,7 +48,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Oliver Aguilerra
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Product Manager</p>
+                                <p className="mb-4 text-xs text-gray-100">Event Coordinator</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Vincent Van Gogh’s most popular painting, The Starry Night.
                                 </p>
@@ -90,7 +84,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Marta Clermont
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Design Team Lead</p>
+                                <p className="mb-4 text-xs text-gray-100">Decor Specialist</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Amet I love liquorice jujubes pudding croissant I love pudding.
                                 </p>
@@ -126,7 +120,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Anthony Geek
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">CTO, Lorem Inc.</p>
+                                <p className="mb-4 text-xs text-gray-100">Catering Manager</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Apple pie macaroon toffee jujubes pie tart cookie caramels.
                                 </p>
@@ -162,7 +156,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Alice Melbourne
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Human Resources</p>
+                                <p className="mb-4 text-xs text-gray-100">Beauty and Fashion Consultant</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Lorizzle ipsum bling bling sit amizzle, consectetuer adipiscing
                                     elit.
@@ -199,7 +193,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Martin Garix
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Good guy</p>
+                                <p className="mb-4 text-xs text-gray-100">Guest Services Manager</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Bacon ipsum dolor sit amet salami jowl corned beef, andouille
                                     flank.
@@ -236,7 +230,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Andrew Larkin
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Backend Developer</p>
+                                <p className="mb-4 text-xs text-gray-100">Budget Analyst</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Moonfish, steelhead, lamprey southern flounder tadpole fish
                                     bigeye.
@@ -273,7 +267,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Sophie Denmo
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Designer</p>
+                                <p className="mb-4 text-xs text-gray-100">Social Media Manager</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     Veggies sunt bona vobis, proinde vos postulo esse magis grape
                                     pea.
@@ -310,7 +304,7 @@ const TeamMate = () => {
                                 <p className="mb-1 text-lg font-bold text-gray-100">
                                     Benedict Caro
                                 </p>
-                                <p className="mb-4 text-xs text-gray-100">Frontend Developer</p>
+                                <p className="mb-4 text-xs text-gray-100">Security Coordinator</p>
                                 <p className="mb-4 text-xs tracking-wide text-gray-400">
                                     I love cheese, especially airedale queso. Cheese and biscuits
                                     halloumi.

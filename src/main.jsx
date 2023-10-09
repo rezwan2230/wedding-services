@@ -14,6 +14,7 @@ import { ToastContainer } from 'react-toastify';
 import TeamMate from './component/TeamMate';
 import ErrorPage from './component/ErrorPage/ErrorPage';
 import Service from './component/Service';
+import Contact from './component/Contact';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
       {
         path: "/teammate",

@@ -19,7 +19,7 @@ const ErrorPage = () => {
                 </a>
                 <p className="mt-5 mb-3 text-xl font-bold text-black md:text-2xl">Page not found (404)</p>
                 <p className="mb-3 text-base font-medium text-gray-700">
-                    The page you're looking for may have moved or no longer exists. Head back to our <a href="/" className="underline text-blue-600">homepage</a>, or take a look at one of the sections below.
+                    The page youre looking for may have moved or no longer exists. Head back to our <a href="/" className="underline text-blue-600">homepage</a>, or take a look at one of the sections below.
                 </p>
             </div>
         </section>
