@@ -4,7 +4,6 @@ import SingleService from "./SingleService";
 
 const Service = () => {
     const data = useLoaderData();
-    console.log(data);
     return (
         <div>
             <div >

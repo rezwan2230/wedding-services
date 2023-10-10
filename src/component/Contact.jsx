@@ -3,7 +3,7 @@ const Contact = () => {
     return (
         <div>
 
-            <section className="bg-white dark:bg-gray-900 h-screen">
+            <section className="bg-white dark:bg-gray-900 h-screen mt-10 md:mt-10  mb-[750px] md:mb-[390px] lg:-mb-20">
                 <div className="container px-6 py-12 mx-auto">
                     <div>
                         <p className="font-medium text-blue-500 dark:text-blue-400">Contact us</p>
@@ -13,7 +13,7 @@ const Contact = () => {
                         <p className="mt-3 text-gray-500 dark:text-gray-400">We’d love to hear from you. Please fill out this form or shoot us an email.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
+                    <div className="grid grid-cols-1 gap-12 md:mt-10 lg:grid-cols-2">
                         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
                             <div>
                                 <span className="inline-block p-3 text-blue-500 rounded-full bg-blue-100/80 dark:bg-gray-800">
@@ -66,7 +66,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="p-4 py-6 rounded-lg bg-gray-50 dark:bg-gray-800 md:p-8 -mt-12">
+                        <div className="p-4 py-6 rounded-lg bg-gray-50 dark:bg-gray-800 md:p-8 lg:-mt-12">
                             <form>
                                 <div className="-mx-2 md:items-center md:flex">
                                     <div className="flex-1 px-2">

@@ -47,7 +47,7 @@ const Login = () => {
         <div className="w-full h-screen font-sans bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/d65tcPb/update.jpg)', backgroundSize:'cover',  backgroundPosition: 'center', objectFit:"top left" }}>
             <div className="container flex items-center justify-center flex-1 h-full mx-auto">
 
-                <div className="w-full max-w-lg lg:ml-[600px] -mt-44">
+                <div className="w-full max-w-lg lg:ml-[600px] md:-mt-44 mt-20">
                     <div className="leading-loose">
                         <form onSubmit={handleLogin} className="max-w-sm p-10 m-auto rounded shadow-2xl bg-white/20">
                             <p className="mb-8 text-3xl font-semibold  text-center ">

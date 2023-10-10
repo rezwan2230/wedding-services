@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { BsArrowRightShort } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
@@ -36,6 +37,10 @@ const SingleService = ({ service }) => {
 
         </div>
     );
+};
+
+SingleService.propTypes = {
+    service: PropTypes.object
 };
 
 export default SingleService;

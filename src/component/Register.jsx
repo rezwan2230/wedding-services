@@ -10,7 +10,7 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const {loader, createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+    const {createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
 
     const handleRegister = (e)=>{
         e.preventDefault()   
@@ -41,9 +41,10 @@ const Register = () => {
         else{
             createUser(email, password)
             .then(result=>{
+                navigate('/')
                 updateUser(name, photoUrl)
                 .then(CurrentResult=>{
-                    navigate('/')
+                    // navigate('/')
                     console.log(CurrentResult.user);
                 })
                 .then(error=>{console.log(error.message);})
@@ -68,12 +69,12 @@ const Register = () => {
 
 
     return (
-        <div className="w-full h-screen font-sans bg-cover" style={{ backgroundImage: 'url(https://i.ibb.co/mSwgLbb/pexels-freestocksorg-70737.jpg)', backgroundSize: 'cover', backgroundPosition: 'right' }}>
-            <div className="container flex items-center justify-center flex-1 h-full mx-auto">
+        <div className="w-full md:h-screen font-sans bg-cover h-[900px]" style={{ backgroundImage: 'url(https://i.ibb.co/mSwgLbb/pexels-freestocksorg-70737.jpg)', backgroundSize: 'cover', backgroundPosition: 'right' }}>
+            <div className="container flex items-center justify-center flex-1 h-full mx-auto mb-52">
 
-                <div className="w-full max-w-lg -mt-28">
+                <div className="w-full max-w-lg md:-mt-16 mt-36">
                     <div className="leading-loose">
-                        <form onSubmit={handleRegister} className=" p-10 m-auto rounded shadow-2xl bg-white/20">
+                        <form onSubmit={handleRegister} className=" p-10 m-auto rounded shadow-2xl bg-white/20 -mt-40 md:mt-0">
                             <p className="mb-8 text-3xl font-semibold  text-center ">
                                 Register
                             </p>

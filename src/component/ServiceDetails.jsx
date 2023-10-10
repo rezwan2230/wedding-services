@@ -5,7 +5,7 @@ const ServiceDetails = () => {
     const details = useLoaderData()
     const { id } = useParams()
     const singleData = details.find(data => data.id == id)
-    const {title, big_title, img,  long_description} = singleData
+    const {title, img,  long_description} = singleData
     // console.log(singleData);
 
     return (

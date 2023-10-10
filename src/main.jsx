@@ -48,11 +48,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog",
-        element: <Blog></Blog>,
+        element: <PrivateRoute><Blog></Blog></PrivateRoute>,
       },
       {
         path: "/teammate",
-        element: <TeamMate></TeamMate>,
+        element: <PrivateRoute><TeamMate></TeamMate></PrivateRoute>,
       },
     ]
   },
