@@ -16,6 +16,7 @@ import ErrorPage from './component/ErrorPage/ErrorPage';
 import Contact from './component/Contact';
 import ServiceDetails from './component/ServiceDetails';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Blog from './component/Blog';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
         path: "/service/:id",
         element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute> ,
         loader : ()=> fetch('/service.json')
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "/teammate",

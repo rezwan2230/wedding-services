@@ -11,10 +11,16 @@ const Header = () => {
         <div className="flex gap-10 font-semibold text-lg">
             <NavLink><li><a>Home</a></li></NavLink>
             <NavLink to='/contact'><li><a>Contact</a></li></NavLink>
-            <NavLink to='/teammate'><li><a>TeamMate</a></li></NavLink>
+            {
+                user && <>
+                <div className="flex gap-10">
+                <NavLink to='/blog'><li><a>Blogs</a></li></NavLink>
+                <NavLink to='/teammate'><li><a>TeamMate</a></li></NavLink>
+                </div>
+                </>
+            }
             <NavLink to='/register'><li><a>Register</a></li></NavLink>
             <NavLink to='/login'><li><a>Login</a></li></NavLink>
-            {/* <NavLink to='/task'><li><a>Task</a></li></NavLink> */}
         </div>
     </>
 

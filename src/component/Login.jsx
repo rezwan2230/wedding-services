@@ -1,6 +1,6 @@
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { toast } from "react-toastify";
@@ -8,7 +8,8 @@ import { toast } from "react-toastify";
 const Login = () => {
 
     const navigate = useNavigate()
-    const {user, signIn, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+    const { signIn, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+    const location = useLocation()
 
 
     const handleLogin = (e)=>{
@@ -20,7 +21,7 @@ const Login = () => {
 
         signIn(email, password)
         .then(result=>{
-            navigate('/')
+            navigate(location?.state ? location.state : '/')
             console.log(result.user);
         })
         .catch(error=>{
@@ -35,9 +36,11 @@ const Login = () => {
 
     const handleGoogleSignIn = ()=>{
         signInWithGoogle()
+        navigate(location?.state ? location.state : '/')
     }
     const handleGithubSignIn = ()=>{
         signInWithGitHub()
+        navigate(location?.state ? location.state : '/')
     }
 
     return (
@@ -77,7 +80,7 @@ const Login = () => {
                             </div>
 
                             <div className="flex justify-center mt-4">
-                            <p>Don't have an account?<span className="font-semibold"><Link className="text-indigo-700" to="/register"> sign up</Link></span></p>
+                            <p>Dont have an account?<span className="font-semibold"><Link className="text-indigo-700" to="/register"> sign up</Link></span></p>
                             </div>
                         </form>
                     </div>

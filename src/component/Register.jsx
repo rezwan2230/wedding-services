@@ -10,7 +10,7 @@ const Register = () => {
 
     const navigate = useNavigate()
 
-    const {createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
+    const {loader, createUser, updateUser, signInWithGoogle, signInWithGitHub} = useContext(AuthContext)
 
     const handleRegister = (e)=>{
         e.preventDefault()   
@@ -59,9 +59,11 @@ const Register = () => {
 
     const handleGoogleSignIn = ()=>{
         signInWithGoogle()
+        navigate('/')
     }
     const handleGithubSignIn = ()=>{
         signInWithGitHub()
+        navigate('/')
     }
 
 
