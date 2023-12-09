@@ -8,5 +8,5 @@
 - Users can create an account with their email password or create an account directly with Google
 - Users can gain trust by looking at our testimonials and past events
 
-#$ Live Link
+## Live Link
 - https://medi-center-79624.web.app/
